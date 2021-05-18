@@ -35,7 +35,7 @@ jobs:
         run: git add * -f
       - name: run git commit
         run: |
-          git commit -m "update vercel"
-          | git config --global user.name "Nullstack Deployer"
+          git config --global user.name "Nullstack Deployer"
+          | git commit -m "update vercel"
       - name: run git push
         run: git push -u origin vercel-deploy
