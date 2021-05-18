@@ -25,7 +25,6 @@ jobs:
 
       - name: create branch vercel
         run: |
-          git branch vercel-deploy -D
           git branch vercel-deploy -f
           git checkout vercel-deploy
       - name: run npm install
@@ -41,4 +40,4 @@ jobs:
           git config --global user.email "nullstack@deployer.ci"
           git commit -m "update vercel"
       - name: run git push
-        run: git push -u origin vercel-deploy
+        run: git push -u origin vercel-deploy -f
