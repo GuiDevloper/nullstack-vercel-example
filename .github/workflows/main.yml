@@ -34,7 +34,7 @@ jobs:
       - name: run git add
         run: git add * -f
       - name: run git commit
-        run: >
+        run: |
           git config --global user.name "Nullstack Deployer"
           git config --global user.email "nullstack@deployer.ci"
           git commit -m "update vercel"
