@@ -25,5 +25,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          echo Nice!,
-          git rev-parse --abbrev-ref HEAD
+          git branch vercel-deploy -f,
+          git checkout vercel-deploy,
+          npm install,
+          npm run build
