@@ -36,6 +36,6 @@ jobs:
       - name: run git commit
         run: |
           git commit -m "update vercel"
-          git config --global user.name "Nullstack Deployer"
+          | git config --global user.name "Nullstack Deployer"
       - name: run git push
         run: git push -u origin vercel-deploy
