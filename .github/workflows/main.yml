@@ -23,9 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Run a multi-line script
+      - name: create branch vercel
         run: git branch vercel-deploy -f
-      - name: run checkout
+      - name: check branch vercel
         run: git checkout vercel-deploy
-      - name: run branchs
-        run: git branch
+      - name: run npm install
+        run: npm install
+      - name: run npm build
+        run: npm run build
+      - name: run git
+        run: |
+          git add *
+          git commit -m "update vercel"
+          git push -u origin vercel-deploy
