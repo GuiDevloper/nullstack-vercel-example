@@ -24,17 +24,18 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: create branch vercel
-        run: git branch vercel-deploy -f
-      - name: check branch vercel
-        run: git checkout vercel-deploy
+        run: |
+          git branch vercel-deploy -f
+          git checkout vercel-deploy
       - name: run npm install
         run: npm install
       - name: run npm build
-        run: npm run build
-      - name: run git add
-        run: git add * -f
+        run: |
+          npm run build
+          rm -rf ./node_modules
       - name: run git commit
         run: |
+          git add * -f
           git config --global user.name "Nullstack Deployer"
           git config --global user.email "nullstack@deployer.ci"
           git commit -m "update vercel"
