@@ -24,8 +24,11 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a multi-line script
+        run: git branch vercel-deploy -f
+      - name: run checkout
+        run: git checkout vercel-deploy
+      - name: run npm build
         run: |
-          git branch vercel-deploy -f
-          git checkout vercel-deploy
-          npm install
+          npm install,
           npm run build
+      
