@@ -29,6 +29,6 @@ jobs:
         run: git checkout vercel-deploy
       - name: run npm build
         run: |
-          npm install,
+          npm install ,
           npm run build
       
