@@ -27,8 +27,8 @@ jobs:
         run: git branch vercel-deploy -f
       - name: run checkout
         run: git checkout vercel-deploy
+      - name: run npm install
+        run: npm install
       - name: run npm build
-        run: |
-          npm install ,
-          npm run build
+        run: npm run build
       
