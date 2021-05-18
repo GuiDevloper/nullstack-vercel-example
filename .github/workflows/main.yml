@@ -33,6 +33,7 @@ jobs:
         run: npm run build
       - name: run git
         run: |
+          git config advice.addIgnoredFile false
           git add *
           git commit -m "update vercel"
           git push -u origin vercel-deploy
