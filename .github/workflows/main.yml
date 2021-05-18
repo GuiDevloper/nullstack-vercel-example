@@ -25,13 +25,14 @@ jobs:
 
       - name: create branch vercel
         run: |
+          git branch vercel-deploy -D
           git branch vercel-deploy -f
           git checkout vercel-deploy
       - name: run npm install
         run: npm install
       - name: run npm build
         run: |
-          npx nulla build
+          webpack --config node_modules/nullstack/webpack.config.js --mode=production
           rm -rf ./node_modules
       - name: run git commit
         run: |
