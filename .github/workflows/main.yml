@@ -25,7 +25,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          git branch vercel-deploy -f,
-          git checkout vercel-deploy,
-          npm install,
+          git branch vercel-deploy -f
+          git checkout vercel-deploy
+          npm install
           npm run build
