@@ -31,10 +31,8 @@ jobs:
         run: npm install
       - name: run npm build
         run: npm run build
-      - name: run git config
-        run: git config advice.addIgnoredFile false
       - name: run git add
-        run: git add *
+        run: git add * -f
       - name: run git commit
         run: git commit -m "update vercel"
       - name: run git push
