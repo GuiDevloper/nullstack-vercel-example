@@ -30,12 +30,11 @@ jobs:
       - name: run npm install
         run: npm install
       - name: run npm build
-        run: |
-          ./node_modules/.bin/webpack --config node_modules/nullstack/webpack.config.js --mode=production
-          rm -rf ./node_modules
-          ls
+        run: ./node_modules/.bin/webpack-cli --config node_modules/nullstack/webpack.config.js --mode=production
       - name: run git commit
         run: |
+          rm -rf ./node_modules
+          ls
           git add * -f
           git config --global user.name "Nullstack Deployer"
           git config --global user.email "nullstack@deployer.ci"
