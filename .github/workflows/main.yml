@@ -26,11 +26,5 @@ jobs:
         uses: ./ # Uses an action in the root directory
         timeout-minutes: 5
       - run: |
-          ls
-          cd ../
-          ls
-          cd ../
-          ls
-          cd ../
-          ls
+          ls -a
         
