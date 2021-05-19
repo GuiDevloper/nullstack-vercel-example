@@ -30,8 +30,9 @@ jobs:
       - name: run npm install
         run: npm install
       - name: run npm build
-        run: npm run build
-        timeout-minutes: 1
+        uses: mikeal/npx@master
+        with:
+          args: "nulla build"
       - name: run git commit
         run: |
           rm -rf ./node_modules
