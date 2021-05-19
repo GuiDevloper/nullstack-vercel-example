@@ -27,15 +27,13 @@ jobs:
         run: |
           git branch vercel-deploy -f
           git checkout vercel-deploy
-          rm -f .gitignore
-      - name: run npm install
-        run: npm install
-      - name: run npm build
-        run: npm run build
+      - name: run install & build
+        run: |
+          npm install
+          npm run build
       - name: run git commit
         run: |
-          rm -rf ./node_modules
-          ls
+          rm -rf ./node_modules .gitignore package-lock.json
           git add . -f
           git config --global user.name "Nullstack Deployer"
           git config --global user.email "nullstack@deployer.ci"
