@@ -18,7 +18,7 @@ function runCLI(args, cli, stdio = 'pipe') {
 }
 
 try {
-  runCLI('run build', 'npm.cmd');
+  runCLI('run build', 'npm');
 } catch (error) {
   core.setFailed(error.message);
 }
