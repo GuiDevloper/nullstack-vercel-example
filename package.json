@@ -10,8 +10,5 @@
   "scripts": {
     "start": "npx nulla start",
     "build": "npx nulla build"
-  },
-  "dependencies": {
-    "@actions/core": "^1.2.7"
   }
 }
