@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "npx nulla start",
-    "build": "webpack --config node_modules/nullstack/webpack.config.js --mode=production"
+    "build": "npx nulla build"
   },
   "dependencies": {
     "@actions/core": "^1.2.7"
