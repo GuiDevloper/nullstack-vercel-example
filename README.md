@@ -1,4 +1,4 @@
-#  V
+# Nullstack Vercel
 
 <img src='https://raw.githubusercontent.com/nullstack/nullstack/master/nullstack.png' height='60' alt='Nullstack' />
 
@@ -11,7 +11,7 @@ Install the dependencies:
 Copy the environment sample to a .env file
 
 ```sh
-NULLSTACK_PROJECT_NAME="[dev]  V"
+NULLSTACK_PROJECT_NAME="[dev] Nullstack Vercel"
 NULLSTACK_PROJECT_DOMAIN="localhost"
 NULLSTACK_PROJECT_COLOR="#D22365"
 NULLSTACK_SERVER_PORT="5000"
