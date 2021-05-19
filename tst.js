@@ -1,4 +1,5 @@
-const core = require('@actions/core');
+#! /usr/bin/env node
+
 const child = require('child_process');
 
 function showExit(...message) {
@@ -20,5 +21,5 @@ function runCLI(args, cli, stdio = 'pipe') {
 try {
   runCLI('run build', 'npm.cmd');
 } catch (error) {
-  core.setFailed(error.message);
+  console.log(error.message);
 }
