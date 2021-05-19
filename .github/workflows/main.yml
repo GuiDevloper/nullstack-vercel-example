@@ -27,6 +27,10 @@ jobs:
         timeout-minutes: 5
       - run: |
           ls
-          ../
+          cd ../
+          ls
+          cd ../
+          ls
+          cd ../
           ls
         
