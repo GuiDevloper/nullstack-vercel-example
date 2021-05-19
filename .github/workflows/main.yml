@@ -13,18 +13,32 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  hello_world_job:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    name: A job to say hello
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v2
-      - run: npm install
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        timeout-minutes: 5
-      - run: |
-          ls -a
-        
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: create branch vercel
+        run: |
+          git branch vercel-deploy -f
+          git checkout vercel-deploy
+          rm -f .gitignore
+      - name: run npm install
+        run: npm install
+      - name: run npm build
+        run: npm run build
+      - name: run git commit
+        run: |
+          rm -rf ./node_modules
+          ls
+          git add . -f
+          git config --global user.name "Nullstack Deployer"
+          git config --global user.email "nullstack@deployer.ci"
+          git commit -m "update vercel"
+      - name: run git push
+        run: git push -u origin vercel-deploy -f
