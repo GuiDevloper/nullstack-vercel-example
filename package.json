@@ -1,0 +1,14 @@
+{
+  "name": "nullstack-vercel-example",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nullstack": "~0.10.0"
+  },
+  "scripts": {
+    "start": "npx nulla start",
+    "build": "npx nulla build"
+  }
+}
