@@ -24,3 +24,4 @@ jobs:
       - run: npm install
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
+        timeout-minutes: 5
