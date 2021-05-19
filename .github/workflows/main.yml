@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CD
 
 # Controls when the action will run. 
 on:
@@ -31,8 +31,7 @@ jobs:
         run: npm install
       - name: run npm build
         run: |
-          npm i webpack -g
-          webpack --config node_modules/nullstack/webpack.config.js --mode=production
+          npm_config_yes=true npm run build
       - name: run git commit
         run: |
           git add * -f
