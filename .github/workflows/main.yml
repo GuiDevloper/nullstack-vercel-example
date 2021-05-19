@@ -32,7 +32,7 @@ jobs:
       - uses: actions/setup-node@v2.1.5
         with:
             node-version: '14'
-      - run: npx webpack
+      - run: npx webpack --config node_modules/nullstack/webpack.config.js --mode=production
       - name: run git commit
         run: |
           rm -rf ./node_modules
