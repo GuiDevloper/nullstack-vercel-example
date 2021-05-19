@@ -16,16 +16,12 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: windows-2019
-    
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '12'
 
       - name: create branch vercel
         run: |
@@ -34,8 +30,8 @@ jobs:
       - name: run npm install
         run: npm install
       - name: run npm build
-        run: ./node_modules/.bin/webpack-cli --config node_modules/nullstack/webpack.config.js --mode=production
-        shell: cmd
+        run: npm run build
+        timeout-minutes: 1
       - name: run git commit
         run: |
           rm -rf ./node_modules
