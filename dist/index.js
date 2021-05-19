@@ -1,4 +1,5 @@
 const core = require('@actions/core');
+const child = require('child_process');
 
 function showExit(...message) {
   console.log(...message);
