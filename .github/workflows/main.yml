@@ -30,7 +30,10 @@ jobs:
       - name: run npm install
         run: npm install
       - name: run npm build
-        run: webpack --config node_modules/nullstack/webpack.config.js --mode=production
+        run: |
+          npm -v
+          npm i webpack
+          webpack --config node_modules/nullstack/webpack.config.js --mode=production
       - name: run git commit
         run: |
           git add * -f
