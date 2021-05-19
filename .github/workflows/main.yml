@@ -31,7 +31,7 @@ jobs:
         run: npm install
       - name: run npm build
         run: |
-          npm_config_yes=true npm run build
+          npm_config_yes=true npx nulla build
       - name: run git commit
         run: |
           git add * -f
