@@ -29,10 +29,10 @@ jobs:
           git checkout vercel-deploy
       - name: run npm install
         run: npm install
-      - name: run npm build
-        uses: mikeal/npx@master
+      - uses: actions/setup-node@v2.1.5
         with:
-          args: "nulla build"
+            node-version: '14'
+      - run: npx webpack
       - name: run git commit
         run: |
           rm -rf ./node_modules
