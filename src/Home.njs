@@ -27,7 +27,7 @@ class Home extends Nullstack {
           </Link>
           <h1> {project.name} </h1>
           <p>
-            Fizemos alguns exemplos para te ajudar a começar! Dê uma olhada na
+            Fizemos alguns exemplos para te ajudar a começar!! Dê uma olhada na
             <Link href="vscode://file/C:/inetpub/wwwroot/-v/src">
               pasta src
             </Link>.
