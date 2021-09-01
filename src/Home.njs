@@ -1,4 +1,5 @@
 import Nullstack from 'nullstack';
+import './Home.scss';
 import Logo from 'nullstack/logo';
 
 class Home extends Nullstack {
