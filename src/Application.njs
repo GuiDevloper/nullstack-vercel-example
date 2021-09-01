@@ -1,5 +1,4 @@
 import Nullstack from 'nullstack';
-import './Application.scss';
 import Home from './Home';
 
 class Application extends Nullstack {
